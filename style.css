@@ -1,0 +1,130 @@
+@font-face {
+  font-family: "Inter Local";
+  src: url("fonts/Inter-Regular-subset.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter Local";
+  src: url("fonts/Inter-Bold-subset.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+body,
+h1,
+h2,
+p,
+table,
+caption {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  font-weight: 700;
+  text-align: left;
+}
+code {
+  font-family:
+    ui-monospace, "Cascadia Code", Consolas, "Courier New", monospace;
+  font-size: 0.9em;
+}
+:root {
+  --text: #1f2933;
+  --muted: #52606d;
+  --bg: #f5f7fa;
+  --border: #9aa5b1;
+  --head-bg: #1f4e79;
+  --head-text: #ffffff;
+  --row-odd: #ffffff;
+  --row-even: #e8eef5;
+}
+body {
+  font-family:
+    "Inter Local",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+.container {
+  max-width: 60rem;
+  margin-inline: auto;
+  padding: 2rem 1rem;
+}
+h1 {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+.lead {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+.note {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.table-wrap {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--row-odd);
+}
+caption {
+  caption-side: top;
+  padding: 0 0 0.75rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+th,
+td {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+thead th {
+  background: var(--head-bg);
+  color: var(--head-text);
+}
+tbody th {
+  background: transparent;
+}
+tbody tr:nth-child(odd) {
+  background: var(--row-odd);
+}
+tbody tr:nth-child(even) {
+  background: var(--row-even);
+}
+@media (max-width: 40rem) {
+  th,
+  td {
+    padding: 0.5rem 0.625rem;
+    font-size: 0.9375rem;
+  }
+}
